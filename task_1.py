@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from datetime import datetime
 
 def get_days_from_today(date):
@@ -12,6 +11,3 @@ def get_days_from_today(date):
     return delta.days
 
 print(get_days_from_today("2026-12-12")) 
-=======
-
->>>>>>> 4c22d3a8d1177ba6da0193428b56c80fae1ba50f
