@@ -17,10 +17,12 @@ raw_numbers = [
 def normalize_phone(phone_number):
     pattern = r"[^\d+]"
     format_number = re.sub(pattern, "", phone_number)
-    if format_number.startswith("380"):
+    if format_number.startswith("+380"):
+        return format_number
+    elif format_number.startswith("380"):
         return "+" + format_number
     else:
-       return "+38" + format_number 
+        return "+38" + format_number 
 
 sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
 print("Нормалізовані номери телефонів для SMS-розсилки:", sanitized_numbers)

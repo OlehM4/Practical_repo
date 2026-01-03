@@ -7,7 +7,9 @@ def get_days_from_today(date):
         return "This date is written incorrectly. Please write it in the format YYYY-MM-DD."
     
     current_date = datetime.today()
-    delta = date - current_date
+    delta = date.date() - current_date.date()
     return delta.days
 
-print(get_days_from_today("2026-12-12")) 
+print(get_days_from_today("2026-01-03")) 
+
+
